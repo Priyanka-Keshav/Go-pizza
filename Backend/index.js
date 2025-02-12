@@ -9,8 +9,13 @@ connectDB().then(() => {
   console.log("Database connected successfully");
   
   // Middleware
-  app.use(express.json());
-  app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+ app.use(express.json());
+  app.use(
+    cors({
+      origin: ["http://localhost:3000", "https://go-pizza.netlify.app"],
+      credentials: true,
+    })
+  );
 
   // Routes
   const userRouter = require("./Router/UserRouter");
