@@ -12,7 +12,7 @@ connectDB().then(() => {
  app.use(express.json());
   app.use(
     cors({
-      origin: ["http://localhost:3000", "https://go-pizza.netlify.app"],
+      origin: ["http://localhost:3000", "https://go-pizza-go.netlify.app"],
       credentials: true,
     })
   );
