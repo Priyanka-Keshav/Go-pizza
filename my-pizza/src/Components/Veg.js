@@ -14,19 +14,19 @@ function Veg() {
   const { Added, setadded } = useContext(added);
   const [addedItems, setAddedItems] = useState({});
   const get_veg = async () => {
-    const data = await fetch("http://localhost:5000/pi/veg");
+    const data = await fetch("https://go-pizza-gamma.vercel.app/pi/veg");
     const response = await data.json();
     setVeg(response);
     console.log(response);
   };
   const get_veg_low = async () => {
-    const data = await fetch("http://localhost:5000/pi/veg-low");
+    const data = await fetch("https://go-pizza-gamma.vercel.app/pi/veg-low");
     const response = await data.json();
     setVeg(response);
     console.log(response);
   };
   const get_veg_high = async () => {
-    const data = await fetch("http://localhost:5000/pi/veg-high");
+    const data = await fetch("https://go-pizza-gamma.vercel.app/pi/veg-high");
     const response = await data.json();
     setVeg(response);
     console.log(response);
