@@ -16,7 +16,7 @@ function Cart() {
   const cart_items = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/cart/getitems?user=${User_id}`
+        `https://go-pizza-gamma.vercel.app/cart/getitems?user=${User_id}`
       );
       const items = await response.json();
       console.log(response.status);
@@ -45,7 +45,7 @@ function Cart() {
     try {
       // Fetch all pizza details
       const promises = pizza_array.map(async (pi) => {
-        const response = await fetch(`http://localhost:5000/pi/${pi}`);
+        const response = await fetch(`https://go-pizza-gamma.vercel.app/pi/${pi}`);
         const data = await response.json();
         return { data, ok: response.ok };
       });
