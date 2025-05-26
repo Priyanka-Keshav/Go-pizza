@@ -14,7 +14,7 @@ function Menu() {
 
   const display = async () => {
     try {
-      const response = await fetch("http://localhost:5000/pi/get");
+      const response = await fetch("https://go-pizza-gamma.vercel.app/pi/get");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -31,7 +31,7 @@ function Menu() {
 
   const low_high = async () => {
     try {
-      const response = await fetch("http://localhost:5000/pi/low-high");
+      const response = await fetch("https://go-pizza-gamma.vercel.app/pi/low-high");
       const data = await response.json();
       if (response.ok) {
         console.log(data);
@@ -46,7 +46,7 @@ function Menu() {
 
   const high_low = async () => {
     try {
-      const response = await fetch("http://localhost:5000/pi/high-low");
+      const response = await fetch("https://go-pizza-gamma.vercel.app/pi/high-low");
       const data = await response.json();
       if (response.ok) {
         console.log(data);
