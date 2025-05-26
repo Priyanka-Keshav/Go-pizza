@@ -14,19 +14,19 @@ function NonVeg() {
   const [addedItems, setAddedItems] = useState({});
   const navigate = useNavigate();
   const get_non_veg = async () => {
-    const data = await fetch("http://localhost:5000/pi/non-veg");
+    const data = await fetch("https://go-pizza-gamma.vercel.app/pi/non-veg");
     const response = await data.json();
     setnonVeg(response);
     console.log(response);
   };
   const get_non_veg_low = async () => {
-    const data = await fetch("http://localhost:5000/pi/non-veg-low");
+    const data = await fetch("https://go-pizza-gamma.vercel.app/pi/non-veg-low");
     const response = await data.json();
     setnonVeg(response);
     console.log(response);
   };
   const get_non_veg_high = async () => {
-    const data = await fetch("http://localhost:5000/pi/non-veg-high");
+    const data = await fetch("https://go-pizza-gamma.vercel.app/pi/non-veg-high");
     const response = await data.json();
     setnonVeg(response);
     console.log(response);
