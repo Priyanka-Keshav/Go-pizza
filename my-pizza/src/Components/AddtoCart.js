@@ -1,6 +1,6 @@
 export const AddtoCart = async (User_id, pizza_id, navigate) => {
   const response = await fetch(
-    `http://localhost:5000/cart/addcart?user=${User_id}&pizza=${pizza_id}`,
+    `https://go-pizza-gamma.vercel.app/cart/addcart?user=${User_id}&pizza=${pizza_id}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -23,7 +23,7 @@ export const AddtoCart = async (User_id, pizza_id, navigate) => {
 
 export const delete_cart = async (User_id, pizza_id) => {
   const response = await fetch(
-    `http://localhost:5000/cart/deleteitem?user=${User_id}&pizza=${pizza_id}`,
+    `https://go-pizza-gamma.vercel.app/cart/deleteitem?user=${User_id}&pizza=${pizza_id}`,
     { method: "DELETE" }
   );
   const data = response.json();
